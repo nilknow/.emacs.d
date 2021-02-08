@@ -1,3 +1,13 @@
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
+;; set GC threshold, speed up startup
+(setq gc-cons-threshold most-positive-fixnum)
+
 (setq package-check-signature nil)
 (when (>= emacs-major-version 24)
   (package-initialize)
@@ -20,8 +30,4 @@
 
 (require 'use-package)
 
-(use-package benchmark-init
- :init(benchmark-init/activate)
- :hook(after-init . benchmark-init/deactivate))
-
-(provide 'init-packages)
+(provide 'init-startup)

@@ -20,8 +20,4 @@
 
 (require 'use-package)
 
-(use-package benchmark-init
- :init(benchmark-init/activate)
- :hook(after-init . benchmark-init/deactivate))
-
-(provide 'init-packages)
+(provide 'start-up)
